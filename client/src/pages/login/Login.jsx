@@ -1,5 +1,5 @@
 import { useContext, useRef } from "react";
-import "./login.css";
+import './login.css';
 import { loginCall } from "../../apiCalls";
 import { AuthContext } from "../../context/AuthContext";
 //import { CircularProgress } from "@material-ui/core";
@@ -19,7 +19,7 @@ export default function Login() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Intopcol chat</h3>
+          <h3 className="loginLogo">INTOPCOL </h3>
           <span className="loginDesc">
           Conectate con tu equipo de trabajo
           </span>
@@ -43,7 +43,7 @@ export default function Login() {
             />
             <button className="loginButton">{isFetching ? "loading" : "Iniciar sesión" }</button>
             <span className="loginForgot">Olvidaste tu contraseña?</span>
-            <button className="loginRegisterButton" type="submit">Crea tu cuenta d</button>
+            <button className="loginRegisterButton" type="submit">Crea tu cuenta </button>
               {/*{isFetching ? (
                 <CircularProgress color='white' size="20px" />
               ) : (

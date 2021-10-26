@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+
 .login {
   width: 100vw;
   height: 100vh;
-  background-color: #f0f2f5;
+  background-color: #f0f2f5bb;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,14 +24,17 @@
 }
 
 .loginLogo {
+  font-family: Titillium Web;
   font-size: 50px;
   font-weight: 800;
-  color: #1775ee;
+  color: #242B35;
   margin-bottom: 10px;
 }
 
 .loginDesc {
-  font-size: 24px;
+  font-family: Titillium Web;
+  font-weight: 700;
+  font-size: 30px;
 }
 
 .loginBox{
@@ -43,7 +48,7 @@
 }
 
 .loginInput{
-    height: 50px;
+    height: 70px;
     border-radius: 10px;
     border: 1px solid gray;
     font-size: 18px;
@@ -56,10 +61,11 @@
 }
 
 .loginButton{
-    height: 50px;
-    border-radius: 10px;
+    width: 100%;
+    height: 80px;
+    border-radius: 20px;
     border: none;
-    background-color: #1775ee;
+    background-color: #5747A6 ;
     color: white;
     font-size: 20px;
     font-weight: 500;
@@ -72,12 +78,13 @@
 }
 
 .loginRegisterButton{
-    width: 60%;
+    width: 100%;
+    margin-top: 10px;
     align-self: center;
-    height: 50px;
-    border-radius: 10px;
+    height: 80px;
+    border-radius: 20px;
     border: none;
-    background-color: #42b72a;
+    background-color: #3dc7fd  ;
     color: white;
     font-size: 20px;
     font-weight: 500;
