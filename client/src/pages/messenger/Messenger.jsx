@@ -11,7 +11,7 @@ import axios from 'axios'
 export default function Messenger() {
 
     const [conversations, setConversations] = useState([]);
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     console.log(user)
     
@@ -24,7 +24,8 @@ export default function Messenger() {
             console.log(err);
           }
         };
-        getConversations();}, [user._id]);
+        getConversations();
+      }, [user._id]);
 
     return (
         <>
@@ -32,10 +33,9 @@ export default function Messenger() {
             <div className="chatmenu"></div>
                 <div className="chatMenuWrapper">
                     <input placeholder="Busca a tus amigos" className ="chatMenuInput"></input>
-                        <Conversation/>
-                        <Conversation/>
-                        <Conversation/>
-                        <Conversation/>                    
+                        {conversations.map((c) => (
+                            <Conversation conversation={c} currentUser={user}/>  
+                        ))}             
                 </div>
                 
             <div className="chatBox"></div>

@@ -92,9 +92,9 @@ export default function Register() {
               type="password"
             />
             <button className="loginButton" type="submit">
-              Sign Up
+              Registrarse
             </button>
-            <button className="loginRegisterButton">Log into Account</button>
+            <button className="loginRegisterButton">Iniciar sesión</button>
           </form>
         </div>
       </div>
