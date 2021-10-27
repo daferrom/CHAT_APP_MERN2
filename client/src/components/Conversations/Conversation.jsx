@@ -6,7 +6,7 @@ import './conversation.css';
 export default function Conversation({ conversation, currentUser}) { 
  
   //const [user, setUser] = useState(null)
-
+  /*
   useEffect(()=>{
     const friendId = conversation.members.find((m) => m !== currentUser._id )
   
@@ -20,7 +20,7 @@ export default function Conversation({ conversation, currentUser}) {
     };
     getUser() 
   },[ currentUser, conversation])
-
+  */
   return ( 
     <div className="conversation"> 
     <img 

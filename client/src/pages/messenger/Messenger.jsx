@@ -25,7 +25,7 @@ export default function Messenger() {
             console.log(err);
           }
         };
-        getConversations();
+        //getConversations();
       }, [user._id]);
 
     return (
