@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Conversation from '../../components/Conversations/Conversation'
+import Conversation from '../../components/conversations/Conversation'
 //import Topbar from '../../components/topbar/Topbar'
 import './messenger.css'
 import Message from '../../components/message/Message'
@@ -10,7 +10,7 @@ import axios from 'axios'
 
 export default function Messenger() {
 
-    const [conversations, setConversations] = useState([]);
+    const [ conversations, setConversations] = useState([]);
     const { user } = useContext(AuthContext);
 
     console.log(user)
@@ -19,7 +19,8 @@ export default function Messenger() {
         const getConversations = async () => {
           try {
             const res = await axios.get("/conversations/" + user._id);
-            setConversations(res.data);
+            console.log(res);
+            setConversations(res.data)
           } catch (err) {
             console.log(err);
           }
@@ -34,7 +35,7 @@ export default function Messenger() {
                 <div className="chatMenuWrapper">
                     <input placeholder="Busca a tus amigos" className ="chatMenuInput"></input>
                         {conversations.map((c) => (
-                            <Conversation conversation={c} currentUser={user}/>  
+                            <Conversation conversation={c} current={user}/>  
                         ))}             
                 </div>
                 
