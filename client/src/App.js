@@ -1,6 +1,6 @@
-import Home from "./pages/home/Home";
+//import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
-import Profile from "./pages/profile/Profile";
+//import Profile from "./pages/profile/Profile";
 import Register from "./pages/register/Register";
 import {
   BrowserRouter as Router,
@@ -15,7 +15,7 @@ import Messenger  from './pages/messenger/Messenger'
 function App() {
   const { user } = useContext(AuthContext);
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/">
           {user ? <Redirect to="/messenger"/>: <Register />}
